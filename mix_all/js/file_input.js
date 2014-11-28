@@ -1,17 +1,3 @@
-(function () {
-
-    var fileSelect = document.getElementById("fileSelect"),
-        fileElem = document.getElementById("fileElem");
-
-    //fileSelect.addEventListener("click", function (e) {
-    //    if (fileElem) {
-    //        fileElem.click();
-    //    }
-    //    e.preventDefault(); // prevent navigation to "#"
-    //}, false);
-
-})();
-
 function handleFiles(files) {
     var preview = document.getElementById("preview");
     preview.innerHTML = '';
