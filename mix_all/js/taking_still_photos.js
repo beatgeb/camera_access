@@ -6,7 +6,7 @@
         photo        = document.querySelector('#taking_still_photos #photo'),
         startbutton  = document.querySelector('#taking_still_photos #startbutton'),
         width = 320,
-        height = 0;
+        height = 400;
 
     navigator.getMedia = ( navigator.getUserMedia ||
     navigator.webkitGetUserMedia ||
