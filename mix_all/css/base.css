@@ -65,6 +65,28 @@ a:hover {
 	text-decoration: underline;
 }
 
+ul.main-navigation {
+    display: block;
+    overflow: hidden;
+}
+ul.main-navigation li {
+    list-style: none;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    float: left;
+}
+ul.main-navigation a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+button, ul.main-navigation a {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+
 html {
 	color: #000;
 	min-height: 100%;	
@@ -101,6 +123,10 @@ ul {
 	-moz-box-shadow: 1px 1px 10px #000;
 	-webkit-box-shadow: 1px 1px 5px #000;
 	box-shadow: 1px 1px 10px #000;
+}
+
+.container.wide {
+    width: 100%;
 }
 
 @media screen and (max-width: 320px) {

@@ -18,14 +18,19 @@
                 <li><a href="addi_osmani.html">Addi Osmanis getUserMedia with fallback</a></li>
             </ul>
         </div>
-        <div class="container"  id="taking_still_photos">
-            <h2>Taking a still photo</h2>
+        <div class="container" id="getusermedia">
+            <h2>getUserMedia</h2>
             <section class="main-content">
-                <video id="video"></video>
-                <button id="startbutton">Take photo</button>
-                <canvas id="canvas"></canvas>
-                <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
+                <p>A demo of getUserMedia, currently implemented in Firefox, Google Chrome and Opera. Choose to stream live from your device's camera.</p>
+
+                <h2>Preview:</h2>
+                <p>
+                    <video id="live-video" style="border: 1px solid #000"></video>
+                </p>
+
+
             </section>
+
         </div>
         <div class="container">
             <h2>Errors</h2>
@@ -34,6 +39,6 @@
 
         <p class="footer">Most of the code is originally from the <a href="https://github.com/robnyman/robnyman.github.com/tree/master/camera-api">Camera API repository on GitHub</a>.</p>
 
-        <script src="js/taking_still_photos.js"></script>
+        <script src="js/getusermedia.js"></script>
     </body>
 </html>
