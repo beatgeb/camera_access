@@ -14,6 +14,7 @@
             },
             function (media) {
                 liveVideo.src = window.webkitURL.createObjectURL(media);
+                return liveVideo.play();
             },
             function (error) {
                 var t = document.createTextNode("An error occurred: " + error + "\n");

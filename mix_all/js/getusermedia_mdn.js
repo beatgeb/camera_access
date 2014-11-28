@@ -18,7 +18,7 @@
             function (localMediaStream) {
                 var video = document.querySelector('#getusermedia_mdn video');
                 video.src = window.URL.createObjectURL(localMediaStream);
-                video.play();
+                return video.play();
                 // Do something with the video here, e.g. video.play()
             },
 
