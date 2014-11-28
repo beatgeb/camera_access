@@ -20,26 +20,13 @@
         },
         function(stream) {
             video.autoplay = true;
-            if ((typeof MediaStream !== "undefined" && MediaStream !== null) && stream instanceof MediaStream) {
-
-                if (video.mozSrcObject !== undefined) { //FF18a
-                    video.mozSrcObject = stream;
-                } else { //FF16a, 17a
-                    video.src = stream;
-                }
-
-                return video.play();
-
+            if (navigator.mozGetUserMedia) {
+                video.mozSrcObject = stream;
             } else {
                 var vendorURL = window.URL || window.webkitURL;
-                video.src = vendorURL ? vendorURL.createObjectURL(stream) : stream;
+                video.src = vendorURL.createObjectURL(stream);
             }
-
-            video.onerror = function () {
-                stream.stop();
-                streamError();
-            };
-            
+            video.play();
         },
         function(err) {
             console.log("An error occured! " + err);
