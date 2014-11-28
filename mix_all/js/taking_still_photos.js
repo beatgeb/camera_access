@@ -1,6 +1,6 @@
 (function() {
 
-    var streaming = false,
+    var streaming = true,
         video        = document.querySelector('#taking_still_photos #video'),
         canvas       = document.querySelector('#taking_still_photos #canvas'),
         photo        = document.querySelector('#taking_still_photos #photo'),
@@ -19,7 +19,6 @@
             audio: false
         },
         function(stream) {
-            var video = document.querySelector('#taking_still_photos #video');
             video.autoplay = true;
             if ((typeof MediaStream !== "undefined" && MediaStream !== null) && stream instanceof MediaStream) {
 
