@@ -80,10 +80,15 @@ ul.main-navigation a {
     text-decoration: none;
 }
 
-button, ul.main-navigation a {
+button, .button, ul.main-navigation a {
     padding: 20px;
     background-color: lightgray;
     border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
 }
 
 
