@@ -26,7 +26,7 @@
                 var vendorURL = window.URL || window.webkitURL;
                 video.src = vendorURL.createObjectURL(stream);
             }
-            video.play();
+            return video.play();
         },
         function(err) {
             console.log("An error occured! " + err);
