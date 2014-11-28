@@ -6,8 +6,6 @@
         navigator.msGetUserMedia);
         error = document.querySelector("#error");
 
-    alert(navigator.getUserMedia);
-
     if (liveVideo && navigator.getUserMedia) {
         navigator.getUserMedia(// constraints
             {
@@ -15,7 +13,6 @@
                 audio: true
             },
             function (media) {
-                alert(media);
                 liveVideo.src = window.webkitURL.createObjectURL(media);
             },
             function (error) {

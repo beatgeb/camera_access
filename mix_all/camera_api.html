@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>camera_accesss</title>
+        <link rel="stylesheet" href="css/base.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Test different camera access variants</h1>
+            <ul>
+                <li><a href="camera_api.html">Camera API</a></li>
+                <li><a href="getusermedia.html">getUserMedia</a></li>
+                <li><a href="getusermedia_mdn.html">getUserMedia MDN</a></li>
+                <li><a href="taking_still_photos.html">Taking still photos</a></li>
+                <li><a href="addi_osmani.html">Addi Osmanis getUserMedia with fallback</a></li>
+            </ul>
+        </div>
+        <div class="container" id="camera_api">
+
+            <h2>Camera API</h2>
+            <section class="main-content">
+                <p>A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).</p>
+
+                <p>
+                    <input type="file" id="take-picture" accept="image/*">
+                </p>
+
+                <h2>Preview:</h2>
+                <p>
+                    <img src="about:blank" alt="" id="show-picture">
+                </p>
+
+            </section>
+        </div>
+        <div class="container">
+            <h2>Errors</h2>
+            <p id="error"></p>
+        </div>
+
+        <p class="footer">Most of the code is originally from the <a href="https://github.com/robnyman/robnyman.github.com/tree/master/camera-api">Camera API repository on GitHub</a>.</p>
+
+        <script src="js/camera_api.js"></script>
+    </body>
+</html>

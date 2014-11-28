@@ -10,71 +10,13 @@
 
         <div class="container">
             <h1>Test different camera access variants</h1>
+            <ul>
+                <li><a href="camera_api.html">Camera API</a></li>
+                <li><a href="getusermedia.html">getUserMedia</a></li>
+                <li><a href="getusermedia_mdn.html">getUserMedia MDN</a></li>
+                <li><a href="taking_still_photos.html">Taking still photos</a></li>
+                <li><a href="addi_osmani.html">Addi Osmanis getUserMedia with fallback</a></li>
+            </ul>
         </div>
-        <div class="container" id="camera_api">
-
-            <h2>Camera API</h2>
-            <section class="main-content">
-                <p>A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).</p>
-
-                <p>
-                    <input type="file" id="take-picture" accept="image/*">
-                </p>
-
-                <h2>Preview:</h2>
-                <p>
-                    <img src="about:blank" alt="" id="show-picture">
-                </p>
-
-            </section>
-        </div>
-        <div class="container" id="getusermedia">
-            <h2>getUserMedia</h2>
-            <section class="main-content">
-                <p>A demo of getUserMedia, currently implemented in Firefox, Google Chrome and Opera. Choose to stream live from your device's camera.</p>
-
-                <h2>Preview:</h2>
-                <p>
-                    <video id="live-video" style="border: 1px solid #000"></video>
-                </p>
-
-
-            </section>
-
-        </div>
-        <div class="container"  id="getusermedia_mdn">
-            <h2>getUserMedia MDN</h2>
-            <section class="main-content">
-                <p>A demo of getUserMedia, currently implemented in Firefox, Google Chrome and Opera. Choose to stream live from your device's camera.</p>
-
-                <h2>Preview:</h2>
-                <p>
-                    <video style="border: 1px solid #000"></video>
-                </p>
-
-            </section>
-        </div>
-        <div class="container"  id="taking_still_photos">
-            <h2>Taking a still photo</h2>
-            <section class="main-content">
-                <video id="video"></video>
-                <button id="startbutton">Take photo</button>
-                <canvas id="canvas"></canvas>
-                <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
-            </section>
-        </div>
-        <div class="container">
-            <h2>Errors</h2>
-            <p id="error"></p>
-        </div>
-
-        <p class="footer">Most of the code is originally from the <a href="https://github.com/robnyman/robnyman.github.com/tree/master/camera-api">Camera API repository on GitHub</a>.</p>
-
-        <script src="js/camera_api.js"></script>
-        <script src="js/getusermedia.js"></script>
-        <script src="js/getusermedia_mdn.js"></script>
-        <script src="js/taking_still_photos.js"></script>
-
-
     </body>
 </html>
