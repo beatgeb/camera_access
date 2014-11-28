@@ -19,6 +19,7 @@
             audio: false
         },
         function(stream) {
+            video.autoplay = true;
             if (navigator.mozGetUserMedia) {
                 video.mozSrcObject = stream;
             } else {
