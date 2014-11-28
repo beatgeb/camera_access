@@ -15,11 +15,29 @@
             },
 
             // successCallback
-            function (localMediaStream) {
+            function (stream) {
                 var video = document.querySelector('#getusermedia_mdn video');
-                video.src = window.URL.createObjectURL(localMediaStream);
-                return video.play();
-                // Do something with the video here, e.g. video.play()
+                video.autoplay = true;
+
+                if ((typeof MediaStream !== "undefined" && MediaStream !== null) && stream instanceof MediaStream) {
+
+                    if (video.mozSrcObject !== undefined) { //FF18a
+                        video.mozSrcObject = stream;
+                    } else { //FF16a, 17a
+                        video.src = stream;
+                    }
+
+                    return video.play();
+
+                } else {
+                    var vendorURL = window.URL || window.webkitURL;
+                    video.src = vendorURL ? vendorURL.createObjectURL(stream) : stream;
+                }
+
+                video.onerror = function () {
+                    stream.stop();
+                    streamError();
+                };
             },
 
             // errorCallback
